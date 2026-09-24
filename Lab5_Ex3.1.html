@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infographic & Video: Lợi Ích Của Công Nghệ Số Trong Học Tập</title>
-    <!-- Tailwind CSS cho Giao diện Responsive -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Font & FontAwesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,10 +15,9 @@
         .gradient-header {
             background: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #075985 100%);
         }
-        /* Style cho khung chứa video chuẩn tỷ lệ 16:9 */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
         }
@@ -33,6 +32,7 @@
 </head>
 <body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col justify-between">
 
+    <!-- HEADER -->
     <header class="gradient-header text-white py-8 px-4 shadow-md text-center">
         <div class="max-w-6xl mx-auto">
             <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/30 uppercase tracking-wider">
@@ -47,44 +47,58 @@
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full space-y-8">
         
-        <!-- Thông báo về tập tin ảnh -->
-        <div class="mb-6 bg-blue-50 border-l-4 border-sky-500 p-4 rounded-r-lg shadow-sm flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <i class="fa-solid fa-file-image text-sky-600 text-xl"></i>
+        <!-- THÔNG TIN SINH VIÊN -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+            <div class="flex items-center space-x-4 mb-4 pb-3 border-b border-slate-100">
+                <div class="bg-sky-600 text-white p-3 rounded-xl">
+                    <i class="fa-solid fa-id-card text-2xl"></i>
+                </div>
                 <div>
-                    <p class="text-sm font-semibold text-slate-800">Hiển thị file đính kèm: <span class="font-mono text-sky-700 bg-sky-100 px-2 py-0.5 rounded">Lab05_Ex2.1.png</span></p>
-                    <p class="text-xs text-slate-500">Hình ảnh Infographic gốc được nạp trực tiếp từ thư mục của bạn.</p>
+                    <h2 class="text-xl font-bold text-slate-800">Thông Tin Sinh Viên</h2>
+                    <p class="text-xs text-slate-500">Thông tin người thực hiện bài lab</p>
                 </div>
             </div>
-            <a href="Lab05_Ex2.1.png" target="_blank" class="hidden sm:inline-flex items-center text-xs bg-sky-600 text-white px-3 py-1.5 rounded-lg hover:bg-sky-700 transition">
-                <i class="fa-solid fa-expand mr-1.5"></i> Mở ảnh gốc
-            </a>
-        </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                <div class="bg-sky-50 p-3.5 rounded-xl border border-sky-100">
+                    <span class="text-xs text-slate-500 block">Họ và tên:</span>
+                    <strong class="text-sky-900 text-base">Lê Thị Diễm Hằng</strong>
+                </div>
+                <div class="bg-sky-50 p-3.5 rounded-xl border border-sky-100">
+                    <span class="text-xs text-slate-500 block">Ngành học:</span>
+                    <strong class="text-sky-900 text-base">An toàn thông tin</strong>
+                </div>
+                <div class="bg-sky-50 p-3.5 rounded-xl border border-sky-100">
+                    <span class="text-xs text-slate-500 block">Mã số sinh viên:</span>
+                    <strong class="text-sky-900 text-base">B2605413</strong>
+                </div>
+            </div>
+        </section>
 
+        <!-- CỘT CHÍNH: INFOGRAPHIC & VIDEO YOUTUBE -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            <!-- CỘT BÊN TRÁI: HIỂN THỊ INFOGRAPHIC GỐC (Lab05_Ex2.1.png) -->
+            <!-- CỘT TRÁI: INFOGRAPHIC GỐC -->
             <section class="lg:col-span-6 bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-slate-200">
                 <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
                     <h2 class="text-lg font-bold text-slate-800 flex items-center">
                         <i class="fa-solid fa-image text-sky-600 mr-2"></i> Ảnh Infographic
                     </h2>
-                    <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">File: Lab05_Ex2.1.png</span>
+                    <a href="Lab05_Ex2.1.png" target="_blank" class="text-xs bg-sky-50 text-sky-600 px-2.5 py-1 rounded-md hover:bg-sky-100 border border-sky-200">
+                        <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Xem ảnh gốc
+                    </a>
                 </div>
 
                 <!-- Container Ảnh Infographic -->
-                <div class="flex justify-center bg-slate-50 p-2 rounded-xl border border-slate-200 overflow-hidden">
+                <div class="flex justify-center bg-slate-50 p-2 rounded-xl border border-slate-200 overflow-hidden min-h-[300px] items-center">
                     <img 
                         src="Lab05_Ex2.1.png" 
                         alt="Lợi ích của công nghệ số trong học tập" 
-                        class="w-full h-auto max-w-lg object-contain rounded-lg shadow-sm transition-transform duration-300 hover:scale-[1.02]"
-                        id="infographic-img"
+                        class="w-full h-auto max-w-lg object-contain rounded-lg shadow-sm"
                     />
                 </div>
 
-                <!-- Chú thích hình ảnh -->
                 <div class="mt-4 text-center">
                     <p class="text-xs text-slate-500 italic">
                         Infographic tạo bởi Canva AI, hình ảnh từ Unsplash (Unsplash license).
@@ -92,10 +106,9 @@
                 </div>
             </section>
 
-            <!-- CỘT BÊN PHẢI: NHÚNG VIDEO YOUTUBE & NỘI DUNG TÓM TẮT -->
+            <!-- CỘT PHẢI: VIDEO YOUTUBE -->
             <section class="lg:col-span-6 space-y-6">
                 
-                <!-- Khối nhúng Video YouTube -->
                 <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-slate-200">
                     <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
                         <h2 class="text-lg font-bold text-slate-800 flex items-center">
@@ -104,12 +117,12 @@
                         <span class="text-xs font-medium text-red-600 bg-red-50 px-2.5 py-1 rounded-md">ID: rj_0jq0Dfck</span>
                     </div>
 
-                    <!-- Video YouTube Responsive 16:9 -->
+                    <!-- Video YouTube Embed -->
                     <div class="video-container rounded-xl overflow-hidden shadow-md bg-black">
                         <iframe 
-                            src="https://www.youtube.com/embed/rj_0jq0Dfck?rel=0" 
+                            src="https://www.youtube-nocookie.com/embed/rj_0jq0Dfck" 
                             title="Lợi ích của công nghệ số trong học tập" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -117,12 +130,12 @@
                     <div class="mt-3 text-xs text-slate-500 flex justify-between items-center">
                         <span>Nguồn: YouTube</span>
                         <a href="https://www.youtube.com/watch?v=rj_0jq0Dfck" target="_blank" class="text-sky-600 hover:underline flex items-center">
-                            Mở trên YouTube <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                            Mở trực tiếp trên YouTube <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Khối tóm tắt 4 lợi ích từ Infographic -->
+                <!-- Khối tóm tắt nội dung -->
                 <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 space-y-4">
                     <h3 class="font-bold text-slate-800 border-b border-slate-100 pb-2 flex items-center">
                         <i class="fa-solid fa-list-check text-sky-600 mr-2"></i> Tóm Tắt Nội Dung Chính
@@ -130,30 +143,19 @@
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div class="p-3 rounded-lg bg-sky-50/50 border border-sky-100">
-                            <h4 class="font-semibold text-sky-900 text-sm flex items-center">
-                                <i class="fa-solid fa-book-open mr-2 text-sky-600"></i> Tiếp cận dễ dàng
-                            </h4>
+                            <h4 class="font-semibold text-sky-900 text-sm"> Tiếp cận dễ dàng</h4>
                             <p class="text-xs text-slate-600 mt-1">Tìm tài liệu, khóa học & nguồn học đa dạng ở mọi nơi.</p>
                         </div>
-
                         <div class="p-3 rounded-lg bg-blue-50/50 border border-blue-100">
-                            <h4 class="font-semibold text-blue-900 text-sm flex items-center">
-                                <i class="fa-solid fa-user-gear mr-2 text-blue-600"></i> Cá nhân hóa
-                            </h4>
+                            <h4 class="font-semibold text-blue-900 text-sm"> Cá nhân hóa</h4>
                             <p class="text-xs text-slate-600 mt-1">Điều chỉnh tốc độ & nội dung theo nhu cầu người học.</p>
                         </div>
-
                         <div class="p-3 rounded-lg bg-indigo-50/50 border border-indigo-100">
-                            <h4 class="font-semibold text-indigo-900 text-sm flex items-center">
-                                <i class="fa-solid fa-users mr-2 text-indigo-600"></i> Tăng tương tác
-                            </h4>
+                            <h4 class="font-semibold text-indigo-900 text-sm"> Tăng tương tác</h4>
                             <p class="text-xs text-slate-600 mt-1">Trao đổi, làm việc nhóm & nhận phản hồi nhanh chóng.</p>
                         </div>
-
                         <div class="p-3 rounded-lg bg-cyan-50/50 border border-cyan-100">
-                            <h4 class="font-semibold text-cyan-900 text-sm flex items-center">
-                                <i class="fa-solid fa-lightbulb mr-2 text-cyan-600"></i> Kỹ năng tương lai
-                            </h4>
+                            <h4 class="font-semibold text-cyan-900 text-sm"> Kỹ năng tương lai</h4>
                             <p class="text-xs text-slate-600 mt-1">Rèn tư duy số, tự học & khả năng giải quyết vấn đề.</p>
                         </div>
                     </div>
@@ -162,10 +164,34 @@
             </section>
 
         </div>
+
+        <!-- PHẦN NHÚNG FILE PDF -->
+        <section class="bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-slate-200">
+            <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+                <h2 class="text-lg font-bold text-slate-800 flex items-center">
+                    <i class="fa-solid fa-file-pdf text-red-600 mr-2"></i> Tài Liệu Đính Kèm PDF (Lab05_Ex1.1.pdf)
+                </h2>
+                <a href="Lab05_Ex1.1.pdf" target="_blank" class="text-xs bg-red-600 text-white px-3 py-1.5 rounded-lg hover:bg-red-700 transition">
+                    <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Mở PDF cửa sổ mới
+                </a>
+            </div>
+
+            <!-- Khung hiển thị PDF đa nền tảng -->
+            <div class="w-full h-[600px] bg-slate-50 rounded-xl overflow-hidden border border-slate-200">
+                <object data="Lab05_Ex1.1.pdf" type="application/pdf" class="w-full h-full">
+                    <div class="p-8 text-center">
+                        <p class="text-slate-600 mb-4">Trình duyệt không hỗ trợ xem trực tiếp file PDF này.</p>
+                        <a href="Lab05_Ex1.1.pdf" target="_blank" class="bg-sky-600 text-white px-4 py-2 rounded-lg text-sm font-medium">Click vào đây để tải / xem file PDF</a>
+                    </div>
+                </object>
+            </div>
+        </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs border-t border-slate-800">
-        <p>© Trang web hiển thị Infographic &amp; Video Youtube Giáo Dục</p>
+        <p>© Bài làm của <strong>Lê Thị Diễm Hằng</strong> - MSSV: B2605413 - Ngành An toàn thông tin</p>
     </footer>
 
 </body>
